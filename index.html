@@ -170,7 +170,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/02/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%80%BB%E7%BB%93/">个人博客搭建总结</a>
+      <a class="article-title" href="/2020/03/02/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%80%BB%E7%BB%93/">个人博客搭建问题汇总及解决方案</a>
     </h1>
   
 
@@ -235,7 +235,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/21/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E6%96%87/">我的第一篇博文</a>
+      <a class="article-title" href="/2020/02/21/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E6%96%87/">win10完成hexo博客搭建自制教程来啦~</a>
     </h1>
   
 
@@ -248,10 +248,98 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="我的博客文章"><a href="#我的博客文章" class="headerlink" title="我的博客文章"></a>我的博客文章</h1>
-        
-          <a class="article-more-a" href="/2020/02/21/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E6%96%87/#more">more >></a>
-        
+        <a id="more"></a>
+
+<h2 id="历时三天的博客详细总结-叮"><a href="#历时三天的博客详细总结-叮" class="headerlink" title="历时三天的博客详细总结 叮~"></a>历时三天的博客详细总结 叮~</h2><p><strong><em>看了网上各种各样的教程自己终于搭建成功属于自己的hexo博客，根据自己情况作了个详细教程，希望对大家有所帮助o</em></strong></p>
+<h2 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h2><h3 id="（1）git"><a href="#（1）git" class="headerlink" title="（1）git"></a>（1）git</h3><p><a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a></p>
+<p>一路next安装完成后在cmd窗口中输入git指令如图：</p>
+<p><img src="D:%5Cblog%5Csource%5Cpicture%5Cgit.png" alt="git"></p>
+<p><strong><em>若出现如图结果（显示列出git的各种用法），表示git安装成功啦</em></strong></p>
+<h3 id="（2）Node-js"><a href="#（2）Node-js" class="headerlink" title="（2）Node.js"></a>（2）Node.js</h3><p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a></p>
+<p>1.安装完成后再cmd窗口输入node -v指令如图：</p>
+<p><em>（有的同学找不到cmd窗口，这里教下大家怎样快速找到：键盘Ctrl+r，然后在弹出框中出入cdm）</em></p>
+<p>![node -v](D:\blog\source\picture\node -v.png)</p>
+<p><strong><em>若出现如图结果（显示版本号），表示node.js安装成功啦</em></strong></p>
+<p>2.继续输入npm -v指令如图：</p>
+<p>![npm -v](D:\blog\source\picture\npm -v.png)</p>
+<p><strong><em>若出现如图结果（显示版本号），表示npm安装成功啦</em></strong></p>
+<p>3.我把npm源修改成了淘宝镜像源，大家也可以如此操作，这样可提升访问速度o</p>
+<p><img src="D:%5Cblog%5Csource%5Cpicture%5C%E6%B7%98%E5%AE%9D%E9%95%9C%E5%83%8F%E6%BA%90.png" alt="淘宝镜像源"></p>
+<p><em>淘宝镜像源的检测通过cnpm命令和cnpm -v命令，分别返回cnpm的信息和版本信息，步骤和上面基本类似</em></p>
+<p><strong>（软件安装小tips：我们在进行两个软件准备的时候可以从官方网站去下载，打开网站选择Windows，下一步选择对应的位数（我的是64bit），然后就直接开始下载了，但是下载速度非常慢，因为是外网，大家耐心等待就好啦）</strong></p>
+<p><strong>！下载之后双击安装，选择好安装目录之后，一路next即可！</strong></p>
+<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><p><strong>一、我们首先要进行GitHub的注册，方法如下：</strong></p>
+<p> 1.首先，我们在网页上搜索GitHub，找到官网点击进去。现在我们开始注册GitHub账号了。</p>
+<p><img src="D:%5Cblog%5Csource%5Cpicture%5Cgithub.png" alt="github"></p>
+<p>2.我们点击右上角的sign up （注册的意思），然后会跳到注册页面。第一步是填写注册的名字（name），第二行是填注册的邮箱（email），第三步是填写密码（password），填写完后点击create account。然后会跳转到第二个步骤。</p>
+<p>![sigh up](D:\blog\source\picture\sigh up.png)</p>
+<p>3.step 2是选择计划（choose your plan），这里有两种选择，一是创建公开仓库（repository），而是创建个人仓库（private），但创建个人需要费用，因此，我们选择第一种。这里我们还可以创建（Organizations）。选好后，点击continue。到此，我们就创建完了。</p>
+<p>4.step3是完善你的信息（tailor your experience），就是填写一些你的简历。到此，账号差不多注册完啦。</p>
+<p><strong>二、注册好后，点击桌面上的Git Bash快捷图标，我们要用账号进行环境配置啦</strong></p>
+<p><em>按照以下格式进行运行：（一定要记住自己github的用户名和邮箱哦，会用到）</em></p>
+<p><img src="D:%5Cblog%5Csource%5Cpicture%5C%E9%85%8D%E7%BD%AE%E7%94%A8%E6%88%B7%E5%90%8D%E9%82%AE%E7%AE%B1.png" alt="配置用户名邮箱"></p>
+<p><em>以上命令执行结束后，可用 git config –global –list 命令查看配置是否OK</em></p>
+<p><strong>三、生成ssh</strong></p>
+<p><em>继续刚才的操作，在命令框中输入命令ssh-keygen -t rsa</em>然后连敲三次回车键，结束后去系统盘目录下（一般在 C:\Users\你的用户名.ssh）查看是否有。ssh文件夹生成，此文件夹中以下两个文件</p>
+<p><img src="D:%5Cblog%5Csource%5Cpicture%5Cssh%E6%96%87%E4%BB%B6.png" alt="ssh文件"></p>
+<p><strong>四、将ssh文件夹中的公钥（ id_rsa.pub）添加到GitHub管理平台中，在GitHub的个人账户的设置中找到如下界面</strong></p>
+<p><img src="D:%5Cblog%5Csource%5Cpicture%5Cgithub%E7%95%8C%E9%9D%A2.png" alt="github界面"></p>
+<blockquote>
+<p>title随便起一个，将公钥（ id_rsa.pub）文件中内容复制粘贴到key中，然后点击Ass SSH key就好啦</p>
+</blockquote>
+<p><em>有同学说文件打不开，其实是可以以记事本方式打开的哦！</em></p>
+<p><strong>五、测试一下配置是否成功</strong></p>
+<p>在Git Bush命令框（就是刚才配置账号和邮箱的命令框）中继续输入以下命令，回车</p>
+<p><img src="D:%5Cblog%5Csource%5Cpicture%5Cssh%E6%B5%8B%E8%AF%95.png" alt="ssh测试"></p>
+<p><em>结果如图就说明配置好啦（图上都是本人的结果截图！）</em></p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p><strong><em>1.在cmd窗口运行如下命令</em></strong>（我就直接用淘宝镜像源了）</p>
+<p><img src="D:%5Cblog%5Csource%5Cpicture%5Ccnpm%E6%A3%80%E6%B5%8B.png" alt="cnpm检测"></p>
+<p><em>安装完后如果可以看到hexo-cli的版本号，则表示安装成功。结果如下图所示。</em></p>
+<p><strong><em>2.运行hexo -v命令</em></strong></p>
+<p>![hexo -v](D:\blog\source\picture\hexo -v.png)</p>
+<p><em>若结果显示版本号，则表示安装成功！</em></p>
+<h2 id="初始化博客"><a href="#初始化博客" class="headerlink" title="初始化博客"></a>初始化博客</h2><ul>
+<li><p>在本地建立blog文件夹（我建在d盘，方便自己找到）</p>
+</li>
+<li><p>进入文件夹右击点击git bash here，输入命令hexo init结果最后如图：</p>
+<p>（初始化要等很久请耐心哦）</p>
+<p><img src="D:%5Cblog%5Csource%5Cpicture%5C%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BB%93%E6%9E%9C.png" alt="初始化结果"></p>
+<p><em>此时Hexo就已经在我们本机部署成功啦</em></p>
+</li>
+</ul>
+<h2 id="本地预览"><a href="#本地预览" class="headerlink" title="本地预览"></a>本地预览</h2><ol>
+<li><p><strong>启动hexo</strong></p>
+<p>运行命令hexo s结果如图：</p>
+<p>![hexo s](D:\blog\source\picture\hexo s.png)</p>
+<p>启动成功，Hexo当前就运行在上述网址。</p>
+</li>
+<li><p><strong>在浏览器输入上述网址<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></strong></p>
+<p><img src="D:%5Cblog%5Csource%5Cpicture%5C%E6%9C%AC%E5%9C%B0%E9%A2%84%E8%A7%88.png" alt="本地预览"></p>
+</li>
+</ol>
+<h2 id="用markdown自己写博文"><a href="#用markdown自己写博文" class="headerlink" title="用markdown自己写博文"></a>用markdown自己写博文</h2><p>   <strong><em>我自用的工具是typora，下载网址如下：</em></strong></p>
+<p>   <a href="https://www.typora.io/" target="_blank" rel="noopener">https://www.typora.io/</a></p>
+<p>   <em>在我们用它编辑博文之前一定要熟悉基本的Markdown语法哦</em></p>
+<p>   <strong><em>在这里给出一些常用的写法</em></strong></p>
+<p>   <img src="D:%5Cblog%5Csource%5Cpicture%5C%E5%86%99%E6%B3%951.png" alt="写法1"></p>
+<p>   <img src="D:%5Cblog%5Csource%5Cpicture%5C%E5%86%99%E6%B3%952.png" alt="写法2"></p>
+<p>   <img src="D:%5Cblog%5Csource%5Cpicture%5C%E5%86%99%E6%B3%953.png" alt="写法3"></p>
+<p>   <strong>当我们要在本地查看新博文时，我们该怎么操作？</strong></p>
+<p>   1.清除旧数据，即运行hexo clean，若结果如下图，表示执行成功</p>
+<p>   ![hexo clean](D:\blog\source\picture\hexo clean.png)</p>
+<p>   2.生成新数据，即运行hexo g，若结果出现连续出现<code>Generated:</code>字符串，表示执行成功</p>
+<p>   3.启动hexo 即运行hexo s 和上一个part最后步骤相同了，此时就可以在浏览器输入上述网址<a href="http://localhost:4000/进行本地预览啦" target="_blank" rel="noopener">http://localhost:4000/进行本地预览啦</a>~</p>
+<h1 id="将网站部署到Github（乔迁）"><a href="#将网站部署到Github（乔迁）" class="headerlink" title="将网站部署到Github（乔迁）"></a>将网站部署到Github（乔迁）</h1><p>   <strong>1.首先登录github进去（注册github详细方法上文已图文讲解），按照自己的昵称+.github.io建立一个仓库repository</strong></p>
+<p>   <strong>2.在blog目录下安装一个hexo部署插件</strong></p>
+<p>   运行cnpm install –save hexo-deployer-git</p>
+<p>   <strong>3.找到blog文件夹中的_config.ym文件，使用编辑器打开，修改此代码部分为如图</strong></p>
+<p>   <img src="D:%5Cblog%5Csource%5Cpicture%5C%E6%94%B9github%E4%BB%A3%E7%A0%81.png" alt="改github代码"></p>
+<p>   <strong><em>注意：每个冒号后都必须有一个空格，否则会运行失败</em></strong></p>
+<blockquote>
+<p>更改后进行保存，然后再git输入hexo d，将本地文件部署到github新建的仓库中。</p>
+</blockquote>
+<p>   耐心等待部署成功以后再浏览器可直接输入自己的博客网址啦！比如我的是<a href="https://ccit18081430117.github.io/，谢谢大家，后续会随时补充，感谢阅读！" target="_blank" rel="noopener">https://ccit18081430117.github.io/，谢谢大家，后续会随时补充，感谢阅读！</a></p>
+   <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=497463179&auto=0&height=66"></iframe>
       
 
       
